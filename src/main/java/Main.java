@@ -38,9 +38,6 @@ public class Main {
         // initialise a simulator under the given parameters
         CheckoutSimulator simulator = new CheckoutSimulator(STOP_TIME, ARRIVAL_RATE, SERVICE_RATE);
         for (int count = 0; count < SIMULATION_COUNT; count++) {
-            if (count % 100_000 == 0) {
-                System.out.println(count);
-            }
             // run the simulator and collect the run's statistics
             double[] statistics = simulator.run();
             for (int index = 0; index < STATISTICS_COUNT; index++) {
